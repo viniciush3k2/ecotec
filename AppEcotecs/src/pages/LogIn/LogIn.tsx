@@ -4,18 +4,13 @@ import LogoI from '../../images/logoI.png';
 import Input from '../../components/Input/Index';
 
 export default function LogIn(){
-    return (
+    return ( 
         <SafeAreaView style={styles.container} >
             <Image source={LogoI} style={styles.image} resizeMode="contain" />
 
             <View style={styles.card}>
 
                 <Text style={styles.titulo}>Login</Text>
-                
-                {/* <Text  style={styles.tituloInput} >Usuário</Text>
-                <TextInput style={styles.input} value={()=>{}} />
-                <Text style={styles.tituloInput} >Senha</Text>
-                <TextInput secureTextEntry={true} style={styles.input} value={()=>{}} /> */}
                 <Input title='E-mail' />
                 <Input title='Senha'  secureTextEntry={true} />
 
