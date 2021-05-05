@@ -6,7 +6,7 @@ import SignUp from './src/pages/SignUp/SignUp';
 import Success from './src/pages/Success/Success';
 import ServiceCatalog from './src/pages/ServiceCatalog/ServiceCatalog';
 import {useFonts,Poppins_600SemiBold,Poppins_100Thin_Italic} from '@expo-google-fonts/poppins';
-// import AppLoading from 'expo-app-loading';
+import AppLoading from 'expo-app-loading';
 
 
 
@@ -14,8 +14,8 @@ import {useFonts,Poppins_600SemiBold,Poppins_100Thin_Italic} from '@expo-google-
 export default function App() {
   const [fontsLoaded] = useFonts({Poppins_600SemiBold,Poppins_100Thin_Italic})
 
-  // if(!fontsLoaded)
-  // // return <AppLoading />
+  if(!fontsLoaded)
+    return <AppLoading />
 
   return <ServiceCatalog />;
 }

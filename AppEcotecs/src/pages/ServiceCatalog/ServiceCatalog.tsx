@@ -253,8 +253,6 @@ const styles = StyleSheet.create({
         color:'black'
       },
       iconButton:{
-        color:'black',
-        fontSize:25,
         marginBottom:5,
       }
 });
@@ -282,7 +280,6 @@ const stylesFlatlistServicos = StyleSheet.create({
     },
     titleButton:{
       fontSize:15,
-      color:'black',
       fontWeight:'bold'
     },
     descriptionButton:{
