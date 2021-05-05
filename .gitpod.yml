@@ -1,3 +1,10 @@
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
     command: cd AppEcotecs && npm install --global expo-cli && yarn && expo start --tunnel
+
+vscode:
+  extensions:
+    - pkief.material-icon-theme@4.6.0:3044629cd6eec8b80b5b1cbb91b52cbc
+    - anseki.vscode-color@0.4.5:e8bdc484a2451ee8b303bc2a673ebffa
+    - dracula-theme.theme-dracula@2.22.3:736ab1bad936c53fd45bc2fdfbd6d6da
+    - ritwickdey.liveserver@5.6.1:e4c865d51815543708ca6d7adf1f2bfb
