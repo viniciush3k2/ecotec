@@ -13,7 +13,8 @@ import {
     SectionList,
     Platform
 } from 'react-native';
-import EcoTecTexto from '../../images/EcoTecTexto.png';
+import Header from "../../components/Header/Index";
+
 
 import Artesanato from '../../images/artesanato.png';
 import Eletronico from '../../images/eletronicos.png';
@@ -111,8 +112,8 @@ const Data = [
         provider:'Diego Fernandes',
         preco:"R$ 50,00",
       },
-
   ];
+
   interface teste {
       id:number,
       img:string,
@@ -127,7 +128,7 @@ const Data = [
 export default function ServiceCatalog(){
     
     const [selectedId, setSelectedId] = useState(null);
-     const _renderItem= ({item}:any) => {
+    const _renderItem= ({item}:any) => {
         return (
             <TouchableOpacity  style={stylesFlatlistServicos.buttonTest} onPress={() => {}}>
                 <Image source={{uri:item.img}} style={stylesFlatlistServicos.iconButton} />
@@ -142,12 +143,9 @@ export default function ServiceCatalog(){
     }
    
     return(
-        <View style={styles.container}>            
-            <View style={styles.header}>
-                <Image source={EcoTecTexto} style={styles.image} resizeMode="contain"></Image>
-                <Entypo name="forward" style={styles.icon} />
-            </View>
-
+        <SafeAreaView style={styles.container}>            
+            
+            <Header />
             <TextInput style={styles.searchBar} placeholder="Qual serviço você procura?">                
             </TextInput>
             
@@ -169,9 +167,9 @@ export default function ServiceCatalog(){
                         )
                     }
                 />
-               <View>
-                 <Text style={styles.title}>Serviços</Text> 
-               </View>
+                             
+               <Text style={styles.title}>Serviços</Text> 
+               
                     <FlatList
                         style={{height:Dimensions.get('screen').height}}
                         horizontal={false}
@@ -179,8 +177,9 @@ export default function ServiceCatalog(){
                         keyExtractor={servicos => servicos.id}
                         renderItem={_renderItem}
                     />
+            
                 
-        </View>
+        </SafeAreaView>
     );
 }
 
@@ -191,27 +190,7 @@ const styles = StyleSheet.create({
         paddingHorizontal:10,
         marginBottom:0
     },
-    header:{
-        backgroundColor: '#206A5D',
-        justifyContent:'space-between',
-        alignItems:'center',
-        width: Dimensions.get('window').width,
-        height:148,
-        flexDirection:'row',
-        paddingBottom:10, 
-        paddingHorizontal: 15,
-    },
-    image:{
-       
-    },
-    icon:{
-        color:'white',
-        fontSize:25,
-        paddingHorizontal:20,
-        transform: [
-            {rotateY:"180deg"}
-        ]
-    },
+    
     searchBar:{
         backgroundColor: '#F0F0F5',
         width: Dimensions.get('window').width * 0.9,
@@ -230,6 +209,8 @@ const styles = StyleSheet.create({
         flex: 1,
       },
       title:{
+          width: Dimensions.get('screen').width,
+          paddingHorizontal:15,
           fontFamily:'Poppins_600SemiBold',
           fontSize:20,
           marginVertical:10,
