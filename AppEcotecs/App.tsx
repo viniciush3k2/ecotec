@@ -11,6 +11,7 @@ import ResetPassword from './src/pages/ResetPassword/ResetPassword';
 import ServicePage from './src/pages/ServicePage/ServicePage';
 import {useFonts,Poppins_600SemiBold,Poppins_100Thin_Italic,Poppins_400Regular} from '@expo-google-fonts/poppins';
 import AppLoading from 'expo-app-loading';
+import Mailsent from './src/pages/Mailsent/Mailsent';
 
 export default function App() {
   const [fontsLoaded] = useFonts({Poppins_600SemiBold,Poppins_100Thin_Italic,Poppins_400Regular})
@@ -18,7 +19,7 @@ export default function App() {
   if(!fontsLoaded)
     return <AppLoading />
 
-  return <LogIn />;
+  return <Mailsent />;
 }
 
 const styles = StyleSheet.create({
