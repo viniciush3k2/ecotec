@@ -18,6 +18,7 @@ export default function App() {
 
   if(!fontsLoaded)
     return <AppLoading />
+<<<<<<< HEAD
 
   return (
       <>
@@ -25,6 +26,10 @@ export default function App() {
         <LogIn />
       </>
   );
+=======
+ //teste
+  return <Mailsent />;
+>>>>>>> 12d445d742b6f722f01af7ed7ec808dff3e5ba1f
 }
 
 const styles = StyleSheet.create({
