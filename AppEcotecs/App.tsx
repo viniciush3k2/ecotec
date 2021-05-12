@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,StatusBar } from 'react-native';
 
 import LogIn from './src/pages/LogIn/LogIn';
 import SignUp from './src/pages/SignUp/SignUp';
@@ -19,7 +19,12 @@ export default function App() {
   if(!fontsLoaded)
     return <AppLoading />
 
-  return <Mailsent />;
+  return (
+      <>
+        <StatusBar barStyle="light-content" />
+        <LogIn />
+      </>
+  );
 }
 
 const styles = StyleSheet.create({

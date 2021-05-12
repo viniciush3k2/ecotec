@@ -1,6 +1,6 @@
 tasks:
   - init: 'echo "TODO: Replace with init/build command"'
-    command: cd AppEcotecs && npm install --global expo-cli && yarn && expo start --tunnel
+    command: cd AppEcotecs && npm install --global expo-cli && yarn global add  @expo/ngrok@2.4.3 -D && yarn && expo start --tunnel
 
 vscode:
   extensions:
